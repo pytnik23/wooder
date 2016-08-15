@@ -24,20 +24,11 @@ body
 			opacity: .5
 		nav
 			display: inline-block
-			.logo
-				position: relative
-				font-size: 30px
-				font-weight: bold
-				letter-spacing: 10px
-			.logo:before
-				display: inline-block
-				position: absolute
-				content: ''
-				left: 41px
-				top: 18px
-				width: 56px
-				height: 4px
-				background-color: #bea67c
+	
+
+
+
+
 			ul
 				position: relative
 				bottom: 5px
@@ -249,9 +240,12 @@ body
 
 	section
 		padding:
-			top: 120px
-			bottom: 120px
+			top: 80px
+			bottom: 80px
+		overflow: hidden
 		a
+			display: inline-block
+			margin-top: 12px
 			position: relative
 			.learn-more-arrow
 				color: $main-color
@@ -266,6 +260,7 @@ body
 			background-color: $main-color
 		
 	#furniture
+		padding-top: 150px
 		.furniture-text
 			padding:
 				top: 55px
@@ -289,14 +284,178 @@ body
 				right: 140px
 			text-align: right
 
+	#quality
+		text-align: center
+		h2
+			&:before
+				display: none
+		p
+			display: inline-block
+			max-width: 550px
+			&:before
+				top: -25px
+				left: calc(50% - 20px)
+		.items
+			padding:
+				top: 30px
+				bottom: 30px	
+			.item
+				display: inline-block
+				padding:
+					left: 20px
+					right: 20px
+				.img
+					position: relative
+					&:before
+						position: absolute
+						z-index: 2
+						content: ''
+						top: calc(50% - 30px)
+						left: calc(50% - 30px)
+						display: block
+						width: 60px
+						height: 60px
+						border-radius: 100%
+						background-color: $main-color
+						opacity: .8
+						background-image: url("../images/play.png")
+						background-repeat: no-repeat
+						background-position: 22px center
+					&:hover:before
+						opacity: .95
+					img
+						position: relative
+						border: 10px solid #fff
+						border-radius: 100%
+						box-shadow: 0 0 3px #ccc
+				h4
+					margin-top: 36px
+					position: relative
+					&:before
+						position: absolute
+						top: -18px
+						left: calc(50% - 15px)
+						content: ''
+						width: 30px
+						height: 4px
+						background-color: $main-color
+						opacity: .5
+
+	#video
+		position: relative
+		background: url(../images/video-section-bg.jpg) no-repeat center
+		background-size: cover
+		&:before
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+			content: ''
+			background: rgba(0,0,0,.85)
+		&:after
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+			content: ''
+			background: url("../images/video-section-play-bg.png") 100% 50% no-repeat
+			background-size: 500px
+		.border
+			position: relative
+			margin: -30px
+			padding: 30px
+			border: 1px solid $main-color
+			&:before
+				position: absolute
+				width: 1px
+				height: 100px
+				top: calc(50% - 50px)
+				right: 80px
+				content: ''
+				background-color: rgba(255,255,255,.3)
+		
+		.video-text
+			width: 540px
+			padding:
+				left: 140px
+			h2
+				color: $main-color
+				&:before
+					background-color: #fff
+			p
+				color: #fff
+				margin-bottom: 50px
+			a
+				z-index: 5
+				margin-bottom: 20px
+				display: inline-block
+				padding: 20px 80px
+				border: 1px solid #fff
+				color: #fff
+				&:after
+					display: none
+				&:before
+					position: absolute
+					content: ''
+					width: 25px
+					height: 24px
+					top: 16px
+					left: 40px
+					background: url(../images/play-icon.png) no-repeat
+	#about
+		.about-img
+			width: 616px
+			height: 397px
+			background: url(../images/about-img.jpg) no-repeat
+			box-shadow: -2px 3px 20px rgba(0,0,0,.25)
+		.about-text
+			padding:
+				left: 66px
+			width: 280px
+	
+	footer
+		padding:
+			top: 10px
+			bottom: 10px
+		text-align: center
+		background-color: #171717
+		.section
+			position: relative
+			.copy
+				position: absolute
+				top: 10px
+				left: 0
+				color: #464646
+				font-size: 14px
+			.logo
+				margin: 0 auto
+				color: #fff
+			.designed-by
+				position: absolute
+				top: 10px
+				right: 0
+				color: #464646
+				font-size: 14px
+				.author
+					color: #7d7d7d
 
 
-
-
-
-
-
-
+.logo
+	position: relative
+	font-size: 30px
+	font-weight: bold
+	letter-spacing: 10px
+.logo:before
+	display: inline-block
+	position: absolute
+	content: ''
+	left: 41px
+	top: 18px
+	width: 56px
+	height: 4px
+	background-color: #bea67c
 
 
 
