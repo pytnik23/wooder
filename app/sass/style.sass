@@ -6,7 +6,7 @@ body
 
 	a
 		text-decoration: none
-		color: inherit
+		color: #fff
 	.left-padding
 		padding-left: 300px
 	header
@@ -17,18 +17,29 @@ body
 		right: 0
 		text-transform: uppercase
 		color: #fff
+		a
+			transition: opacity .3s ease-out
+			&:hover, &:focus
+				opacity: 1
 		.mobile-menu
 			position: absolute
 			top: 8px
-			left: 5px
+			left: 40px
 			opacity: .5
+			.menu-icon
+				position: absolute
+				display: block
+				top: -4px
+				left: -30px
+				width: 20px
+				line-height: 1px
+				.menu-icon-line
+					display: inline-block
+					width: 100%
+					height: 1px
+					background-color: $main-color
 		nav
 			display: inline-block
-	
-
-
-
-
 			ul
 				position: relative
 				bottom: 5px
@@ -38,12 +49,30 @@ body
 					bottom: 0
 				padding:
 					left: 0
-				opacity: .5
 				li
 					display: inline-block
 					padding-left: 80px
 					a
+						opacity: .5
 						font-size: 14px
+		.info-link
+			position: absolute
+			top: 7px
+			right: 45px
+			display: inline-block
+			width: 16px
+			height: 16px
+			border: 1px solid #fff
+			border-radius: 100%
+			line-height: 6px
+			text-transform: lowercase
+			opacity: .5
+			&:before
+				position: absolute
+				display: inline-block
+				content: 'i'
+				left: 6px
+				top: 5px
 		.lang-menu
 			position: absolute
 			top: 8px
@@ -114,6 +143,9 @@ body
 				font-size: 12px
 				font-weight: bold
 				color: #fff
+				&:hover
+					background-color: rgba(255,255,255,.1)
+				transition: background-color .3s ease-out
 			.mouse-icon
 				display: block
 				height: 32px
@@ -197,8 +229,9 @@ body
 			width: 25px
 			height: 25px
 			background-image: url("../images/share-25.png")
-			background-repeat: no-repeat
-		
+			transition: transform .4s ease-out
+			&:hover
+				transform: rotate(360deg)
 
 	h2
 		position: relative
@@ -243,12 +276,19 @@ body
 			top: 80px
 			bottom: 80px
 		overflow: hidden
-		a
+		.learn-more-link
 			display: inline-block
 			margin-top: 12px
 			position: relative
+			color: #000
+
 			.learn-more-arrow
 				color: $main-color
+			&:hover
+				color: rgba(0,0,0,.7)
+				&:after
+					width: 78%
+			transition: color .3s ease-out
 		a:after
 			display: inline-block
 			position: absolute
@@ -258,12 +298,13 @@ body
 			width: 50px
 			height: 2px
 			background-color: $main-color
+			transition: width .5s ease-out
 		
 	#furniture
 		padding-top: 150px
 		.furniture-text
 			padding:
-				top: 55px
+				top: 60px
 				left: 140px
 		.furniture-img
 			width: 616px
@@ -279,7 +320,7 @@ body
 			box-shadow: -2px 3px 20px rgba(0,0,0,.25)
 		.decor-text
 			padding:
-				top: 42px
+				top: 34px
 				left: 70px
 				right: 140px
 			text-align: right
@@ -304,6 +345,7 @@ body
 				padding:
 					left: 20px
 					right: 20px
+				cursor: pointer
 				.img
 					position: relative
 					&:before
@@ -321,8 +363,7 @@ body
 						background-image: url("../images/play.png")
 						background-repeat: no-repeat
 						background-position: 22px center
-					&:hover:before
-						opacity: .95
+						transition: opacity .3s
 					img
 						position: relative
 						border: 10px solid #fff
@@ -340,6 +381,14 @@ body
 						height: 4px
 						background-color: $main-color
 						opacity: .5
+						transition: all .5s ease-out
+				&:hover
+					.img:before
+						opacity: .95
+					h4:before
+						left: 0
+						right: 0
+						width: 100%
 
 	#video
 		position: relative
@@ -388,12 +437,16 @@ body
 				color: #fff
 				margin-bottom: 50px
 			a
+				position: relative
 				z-index: 5
 				margin-bottom: 20px
 				display: inline-block
 				padding: 20px 80px
 				border: 1px solid #fff
 				color: #fff
+				&:hover
+					background-color: rgba(255,255,255,.1)
+				transition: background-color .3s ease-out
 				&:after
 					display: none
 				&:before
@@ -412,6 +465,7 @@ body
 			box-shadow: -2px 3px 20px rgba(0,0,0,.25)
 		.about-text
 			padding:
+				top: 50px
 				left: 66px
 			width: 280px
 	
@@ -439,6 +493,7 @@ body
 				color: #464646
 				font-size: 14px
 				.author
+					cursor: pointer
 					color: #7d7d7d
 
 
@@ -457,5 +512,49 @@ body
 	height: 4px
 	background-color: #bea67c
 
-
-
+.bg-letter
+	position: relative
+	&:before
+		z-index: 100
+		position: absolute
+		display: inline-block
+		font-size: 400px
+		font-weight: bold
+		color: rgba(0,0,0,.1)
+.f1
+	&.bg-letter
+		&:before
+			top: -400px
+			left: 0
+			content: 'F'
+.f2
+	&.bg-letter
+		&:before
+			top: 100px
+			left: 50px
+			font-size: 160px
+			content: 'FURNITURE'
+.d1
+	&.bg-letter
+		&:before
+			top: 100px
+			left: -300px
+			content: 'DECOR'
+			font-size: 160px
+.d2
+	&.bg-letter
+		&:before
+			content: 'D'
+.a1
+	&.bg-letter
+		&:before
+			top: 100px
+			left: -150px
+			font-size: 160px
+			content: 'ABOUT'
+.a2
+	&.bg-letter
+		&:before
+			top: -100px
+			left: 200px
+			content: 'A'

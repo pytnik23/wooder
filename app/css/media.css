@@ -1,0 +1,17 @@
+@media only screen and (max-width: 1199px) {
+  body .left-padding {
+    padding-left: 200px;
+  }
+  body header nav ul li {
+    padding-left: 60px;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  body .left-padding {
+    padding-left: 100px;
+  }
+  body header nav ul li {
+    padding-left: 40px;
+  }
+}
