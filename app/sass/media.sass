@@ -10,6 +10,30 @@
 				ul
 					li
 						padding-left: 60px
+		#furniture
+			.furniture-text
+				padding:
+					top: 0
+		#decor
+			.decor-text
+				padding:
+					top: 0
+		#about
+			.about-text
+				padding:
+					top: 0
+
+@media only screen and (min-width: 768px) and (max-width: 1199px)
+	body
+		#furniture
+			.furniture-img
+				height: 325px
+		#decor
+			.decor-img
+				height: 325px
+		#about
+			.about-img
+				height: 325px
 @media only screen and (max-width: 991px)
 	body
 		.left-padding
@@ -19,5 +43,37 @@
 				ul
 					li
 						padding-left: 40px
+
+@media only screen and (min-width: 768px) and (max-width: 991px)
+	body
+		#furniture, #decor, #about
+			h2
+				font-size: 34px
+				letter-spacing: 2px
+			p
+				line-height: 1.8
+		#furniture, #decor, #about
+			h2
+				&:before
+					width: 80px
+					top: 20px
+			h2.left:before
+				left: -100px
+			h2.right:before
+				right: -100px
+		#furniture
+			.furniture-text
+				padding:
+					top: 16px
+					left: 100px
+		#decor
+			.decor-text
+				padding:
+					top: 8px
+					right: 100px
+		#about
+			.about-text
+				padding:
+					top: 34px
 // @media only screen and (max-width: 767px)
 // @media only screen and (max-width: 480px)
