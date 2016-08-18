@@ -37,12 +37,24 @@
 @media only screen and (max-width: 991px)
 	body
 		.left-padding
-			padding-left: 100px
+			padding-left: 0
 		header
+			text-align: center
 			nav
 				ul
-					li
-						padding-left: 40px
+					display: none
+		main
+			text-align: center
+			.section
+				.left-main-elem
+					display: none
+			.main-content
+				.mouse-icon
+					background-position: center
+				.scroll-wrap
+					.scroll
+						position: relative
+						left: 0
 
 @media only screen and (min-width: 768px) and (max-width: 991px)
 	body
@@ -75,5 +87,48 @@
 			.about-text
 				padding:
 					top: 34px
-// @media only screen and (max-width: 767px)
-// @media only screen and (max-width: 480px)
+@media only screen and (max-width: 767px)
+	body
+		main
+			.main-content
+				h1
+					font-size: 60px
+					letter-spacing: 5px
+		#furniture
+			.furniture-text
+		#decor
+			.decor-text
+				display: inline-block
+				float: right
+		#about
+			.about-text
+				padding:
+					left: 140px
+		#video
+			text-align: center
+			.border
+				&:before
+					display: none
+			.video-text
+				display: inline-block
+				padding: 0
+				h2
+					&:before
+						display: none
+				p
+					&:before
+						display: none
+		footer
+			.section
+				.designed-by
+					display: none
+
+@media only screen and (max-width: 480px)
+	body
+		header
+			.info-link
+				display: none
+			.lang-menu
+				display: none
+			nav
+				float: right

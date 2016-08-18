@@ -30,10 +30,26 @@
 
 @media only screen and (max-width: 991px) {
   body .left-padding {
-    padding-left: 100px;
+    padding-left: 0;
   }
-  body header nav ul li {
-    padding-left: 40px;
+  body header {
+    text-align: center;
+  }
+  body header nav ul {
+    display: none;
+  }
+  body main {
+    text-align: center;
+  }
+  body main .section .left-main-elem {
+    display: none;
+  }
+  body main .main-content .mouse-icon {
+    background-position: center;
+  }
+  body main .main-content .scroll-wrap .scroll {
+    position: relative;
+    left: 0;
   }
 }
 
@@ -65,5 +81,50 @@
   }
   body #about .about-text {
     padding-top: 34px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  body main .main-content h1 {
+    font-size: 60px;
+    letter-spacing: 5px;
+  }
+  body #decor .decor-text {
+    display: inline-block;
+    float: right;
+  }
+  body #about .about-text {
+    padding-left: 140px;
+  }
+  body #video {
+    text-align: center;
+  }
+  body #video .border:before {
+    display: none;
+  }
+  body #video .video-text {
+    display: inline-block;
+    padding: 0;
+  }
+  body #video .video-text h2:before {
+    display: none;
+  }
+  body #video .video-text p:before {
+    display: none;
+  }
+  body footer .section .designed-by {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  body header .info-link {
+    display: none;
+  }
+  body header .lang-menu {
+    display: none;
+  }
+  body header nav {
+    float: right;
   }
 }

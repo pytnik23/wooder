@@ -1,6 +1,7 @@
 body {
   font-family: 'Oxygen', sans-serif;
   font-size: 16px;
+  min-width: 480px;
 }
 
 body a {
@@ -34,9 +35,10 @@ body header a:hover, body header a:focus {
 }
 
 body header .mobile-menu {
+  z-index: 1001;
   position: absolute;
   top: 11px;
-  left: 40px;
+  left: 50px;
   opacity: .5;
 }
 
@@ -82,7 +84,7 @@ body header nav ul li a {
 body header .info-link {
   position: absolute;
   top: 10px;
-  right: 45px;
+  right: 55px;
   display: inline-block;
   width: 16px;
   height: 16px;
@@ -106,7 +108,7 @@ body header .info-link:before {
 body header .lang-menu {
   position: absolute;
   top: 11px;
-  right: 5px;
+  right: 15px;
   opacity: .5;
 }
 
@@ -247,7 +249,7 @@ body main .main-content .scroll-wrap .scroll .scroll-text {
 body main .right-main-elem {
   position: absolute;
   top: 260px;
-  right: -90px;
+  right: -86px;
   display: inline-block;
   -webkit-transform: rotate(90deg);
      -moz-transform: rotate(90deg);
@@ -310,7 +312,7 @@ body main .bg .overlay:before {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.85);
 }
 
 body main .share {
@@ -401,6 +403,7 @@ body section {
 body section .learn-more-link {
   display: inline-block;
   margin-top: 12px;
+  margin-bottom: 20px;
   position: relative;
   color: #000;
   -webkit-transition: color .3s ease-out;
@@ -443,6 +446,7 @@ body #furniture {
 body #furniture .furniture-text {
   padding-top: 60px;
   padding-left: 140px;
+  max-width: 400px;
 }
 
 body #furniture .furniture-img {
@@ -456,6 +460,10 @@ body #furniture .furniture-img {
   -webkit-box-shadow: 2px 3px 20px rgba(0, 0, 0, 0.25);
      -moz-box-shadow: 2px 3px 20px rgba(0, 0, 0, 0.25);
           box-shadow: 2px 3px 20px rgba(0, 0, 0, 0.25);
+}
+
+body #decor .col:first-child {
+  float: right;
 }
 
 body #decor .decor-img {
@@ -475,6 +483,7 @@ body #decor .decor-text {
   padding-top: 34px;
   padding-right: 140px;
   text-align: right;
+  max-width: 400px;
 }
 
 body #quality {
@@ -636,7 +645,7 @@ body #video .border:before {
 }
 
 body #video .video-text {
-  width: 540px;
+  max-width: 540px;
   padding-left: 140px;
 }
 
@@ -685,6 +694,10 @@ body #video .video-text a:before {
   background: url(../images/play-icon.png) no-repeat;
 }
 
+body #about .col:first-child {
+  float: right;
+}
+
 body #about .about-img {
   width: 100%;
   height: 400px;
@@ -699,6 +712,7 @@ body #about .about-img {
 }
 
 body #about .about-text {
+  z-index: 3;
   padding-top: 50px;
   padding-left: 66px;
   max-width: 280px;
@@ -718,7 +732,7 @@ body footer .section {
 body footer .section .copy {
   position: absolute;
   top: 10px;
-  left: 0;
+  left: 10px;
   color: #464646;
   font-size: 14px;
 }
@@ -731,7 +745,7 @@ body footer .section .logo {
 body footer .section .designed-by {
   position: absolute;
   top: 10px;
-  right: 0;
+  right: 10px;
   color: #464646;
   font-size: 14px;
 }
@@ -739,6 +753,29 @@ body footer .section .designed-by {
 body footer .section .designed-by .author {
   cursor: pointer;
   color: #7d7d7d;
+}
+
+body .scrollToTop {
+  z-index: 101;
+  display: none;
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  padding: 10px 14px;
+  -webkit-border-radius: 3px;
+     -moz-border-radius: 3px;
+          border-radius: 3px;
+  letter-spacing: 1px;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.7);
+  -webkit-transition: background-color .1s ease-out;
+  -moz-transition: background-color .1s ease-out;
+  -o-transition: background-color .1s ease-out;
+  transition: background-color .1s ease-out;
+}
+
+body .scrollToTop:hover {
+  background-color: #bea67c;
 }
 
 .logo {
@@ -793,6 +830,7 @@ body footer .section .designed-by .author {
 }
 
 .d2.bg-letter:before {
+  top: -100px;
   content: 'D';
 }
 
@@ -807,4 +845,38 @@ body footer .section .designed-by .author {
   top: -100px;
   left: 200px;
   content: 'A';
+}
+
+.mobile-menu-bg-wrap {
+  display: none;
+  z-index: 999;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.mobile-menu-bg-wrap .mobile-menu-block {
+  position: absolute;
+  top: 0;
+  left: -200px;
+  width: 200px;
+  height: 100%;
+  background-color: #bea67c;
+}
+
+.mobile-menu-bg-wrap .mobile-menu-block ul li {
+  list-style-type: none;
+  line-height: 50px;
+}
+
+.mobile-menu-bg-wrap .mobile-menu-block ul li a {
+  display: inline-block;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.mobile-menu-bg-wrap .mobile-menu-block ul li a:hover {
+  color: #fff;
 }
