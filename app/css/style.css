@@ -778,14 +778,14 @@ body .scrollToTop:hover {
   background-color: #bea67c;
 }
 
-.logo {
+body .logo {
   position: relative;
   font-size: 30px;
   font-weight: bold;
   letter-spacing: 10px;
 }
 
-.logo:before {
+body .logo:before {
   display: inline-block;
   position: absolute;
   content: '';
@@ -796,11 +796,11 @@ body .scrollToTop:hover {
   background-color: #bea67c;
 }
 
-.bg-letter {
+body .bg-letter {
   position: relative;
 }
 
-.bg-letter:before {
+body .bg-letter:before {
   z-index: 100;
   position: absolute;
   display: inline-block;
@@ -809,45 +809,45 @@ body .scrollToTop:hover {
   color: rgba(0, 0, 0, 0.1);
 }
 
-.f1.bg-letter:before {
+body .f1.bg-letter:before {
   top: -400px;
   left: 0;
   content: 'F';
 }
 
-.f2.bg-letter:before {
+body .f2.bg-letter:before {
   top: 100px;
   left: 50px;
   font-size: 160px;
   content: 'FURNITURE';
 }
 
-.d1.bg-letter:before {
+body .d1.bg-letter:before {
   top: 100px;
   left: -300px;
   content: 'DECOR';
   font-size: 160px;
 }
 
-.d2.bg-letter:before {
+body .d2.bg-letter:before {
   top: -100px;
   content: 'D';
 }
 
-.a1.bg-letter:before {
+body .a1.bg-letter:before {
   top: 100px;
   left: -150px;
   font-size: 160px;
   content: 'ABOUT';
 }
 
-.a2.bg-letter:before {
+body .a2.bg-letter:before {
   top: -100px;
   left: 200px;
   content: 'A';
 }
 
-.mobile-menu-bg-wrap {
+body .modal-bg {
   display: none;
   z-index: 999;
   position: absolute;
@@ -858,7 +858,9 @@ body .scrollToTop:hover {
   background-color: rgba(0, 0, 0, 0.7);
 }
 
-.mobile-menu-bg-wrap .mobile-menu-block {
+body .mobile-menu-block {
+  display: none;
+  z-index: 1000;
   position: absolute;
   top: 0;
   left: -200px;
@@ -867,16 +869,28 @@ body .scrollToTop:hover {
   background-color: #bea67c;
 }
 
-.mobile-menu-bg-wrap .mobile-menu-block ul li {
+body .mobile-menu-block ul li {
   list-style-type: none;
   line-height: 50px;
 }
 
-.mobile-menu-bg-wrap .mobile-menu-block ul li a {
+body .mobile-menu-block ul li a {
   display: inline-block;
   color: rgba(255, 255, 255, 0.9);
 }
 
-.mobile-menu-bg-wrap .mobile-menu-block ul li a:hover {
+body .mobile-menu-block ul li a:hover {
   color: #fff;
+}
+
+body .modal {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+     -moz-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+       -o-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }

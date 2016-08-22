@@ -59,18 +59,6 @@ gulp.task('fonts', function() {
 	gulp.src('app/fonts/**/*')
 		.pipe(gulp.dest('dist/fonts'));
 });
-gulp.task('php', function() {
-	gulp.src('app/*.php')
-		.pipe(gulp.dest('dist/'));
-});
-gulp.task('htaccess', function() {
-	gulp.src('app/*.htaccess')
-		.pipe(gulp.dest('dist/'));
-});
-gulp.task('robots', function() {
-	gulp.src('app/robots.txt')
-		.pipe(gulp.dest('dist/'));
-});
 
 gulp.task('clear', function() {
 	return cache.clearAll();
@@ -82,7 +70,7 @@ gulp.task('clean', function() {
 
 gulp.task('build', function(callback) {
 	runSequence('clean', 'css',
-		['imageMin', 'useref', 'php', 'fonts', 'htaccess', 'robots'],
+		['imageMin', 'useref', 'fonts'],
 		callback
 	);
 });

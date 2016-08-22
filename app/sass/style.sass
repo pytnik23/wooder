@@ -523,78 +523,80 @@ body
 		&:hover
 			background-color: $main-color
 
-.logo
-	position: relative
-	font-size: 30px
-	font-weight: bold
-	letter-spacing: 10px
-.logo:before
-	display: inline-block
-	position: absolute
-	content: ''
-	left: 41px
-	top: 18px
-	width: 56px
-	height: 4px
-	background-color: #bea67c
-
-.bg-letter
-	position: relative
-	&:before
-		z-index: 100
-		position: absolute
-		display: inline-block
-		font-size: 400px
+	.logo
+		position: relative
+		font-size: 30px
 		font-weight: bold
-		color: rgba(0,0,0,.1)
-.f1
-	&.bg-letter
+		letter-spacing: 10px
+	.logo:before
+		display: inline-block
+		position: absolute
+		content: ''
+		left: 41px
+		top: 18px
+		width: 56px
+		height: 4px
+		background-color: #bea67c
+
+	.bg-letter
+		position: relative
 		&:before
-			top: -400px
-			left: 0
-			content: 'F'
-.f2
-	&.bg-letter
-		&:before
-			top: 100px
-			left: 50px
-			font-size: 160px
-			content: 'FURNITURE'
-.d1
-	&.bg-letter
-		&:before
-			top: 100px
-			left: -300px
-			content: 'DECOR'
-			font-size: 160px
-.d2
-	&.bg-letter
-		&:before
-			top: -100px
-			content: 'D'
-.a1
-	&.bg-letter
-		&:before
-			top: 100px
-			left: -150px
-			font-size: 160px
-			content: 'ABOUT'
-.a2
-	&.bg-letter
-		&:before
-			top: -100px
-			left: 200px
-			content: 'A'
-.mobile-menu-bg-wrap
-	display: none
-	z-index: 999
-	position: absolute
-	top: 0
-	left: 0
-	width: 100%
-	height: 100%
-	background-color: rgba(0,0,0,.7)
+			z-index: 100
+			position: absolute
+			display: inline-block
+			font-size: 400px
+			font-weight: bold
+			color: rgba(0,0,0,.1)
+	.f1
+		&.bg-letter
+			&:before
+				top: -400px
+				left: 0
+				content: 'F'
+	.f2
+		&.bg-letter
+			&:before
+				top: 100px
+				left: 50px
+				font-size: 160px
+				content: 'FURNITURE'
+	.d1
+		&.bg-letter
+			&:before
+				top: 100px
+				left: -300px
+				content: 'DECOR'
+				font-size: 160px
+	.d2
+		&.bg-letter
+			&:before
+				top: -100px
+				content: 'D'
+	.a1
+		&.bg-letter
+			&:before
+				top: 100px
+				left: -150px
+				font-size: 160px
+				content: 'ABOUT'
+	.a2
+		&.bg-letter
+			&:before
+				top: -100px
+				left: 200px
+				content: 'A'
+	.modal-bg
+		display: none
+		z-index: 999
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		background-color: rgba(0,0,0,.7)
 	.mobile-menu-block
+		display: none
+		z-index: 1000
 		position: absolute
 		top: 0
 		left: -200px
@@ -610,6 +612,12 @@ body
 					color: rgba(255,255,255,.9)
 					&:hover
 						color: #fff
+	.modal
+		display: none
+		position: fixed
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%)
 
 
 
