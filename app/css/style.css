@@ -1,7 +1,7 @@
 body {
   font-family: 'Oxygen', sans-serif;
   font-size: 16px;
-  min-width: 480px;
+  min-width: 320px;
 }
 
 body a {
@@ -279,7 +279,8 @@ body main .bg .bg-l {
   display: inline-block;
   height: 100%;
   width: 54%;
-  background: url(../images/bg-l.jpg) no-repeat;
+  background-image: url(../images/bg-l.jpg);
+  background-repeat: no-repeat;
   -webkit-background-size: cover;
      -moz-background-size: cover;
        -o-background-size: cover;
@@ -293,7 +294,8 @@ body main .bg .bg-r {
   height: calc(100% + 30px);
   width: 46%;
   margin-bottom: -30px;
-  background: url(../images/bg-r.jpg) no-repeat;
+  background-image: url(../images/bg-r.jpg);
+  background-repeat: no-repeat;
   -webkit-background-size: cover;
      -moz-background-size: cover;
        -o-background-size: cover;
@@ -594,7 +596,9 @@ body #quality .items .item:hover h4:before {
 
 body #video {
   position: relative;
-  background: url(../images/video-section-bg.jpg) no-repeat center;
+  background-image: url(../images/video-section-bg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
   -webkit-background-size: cover;
      -moz-background-size: cover;
        -o-background-size: cover;

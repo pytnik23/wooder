@@ -55,6 +55,11 @@
 					.scroll
 						position: relative
 						left: 0
+			.bg
+				.bg-l
+					background-image: url(../images/bg-l_sm.jpg)
+				.bg-r
+					background-image: url(../images/bg-r_sm.jpg)
 
 @media only screen and (min-width: 768px) and (max-width: 991px)
 	body
@@ -132,3 +137,41 @@
 				display: none
 			nav
 				float: right
+		.logo
+			font-size: 24px
+			top: 3px
+			&:before
+				left: 35px
+				top: 14px
+				width: 47px
+				height: 4px
+		main
+			.main-content
+				h1
+					font-size: 50px
+				a 
+					padding: 15px 40px
+		#furniture
+			padding-top: 50px
+		.furniture-text, .decor-text, .about-text
+			padding: 10px 10px !important
+			h2
+				&:before
+					display: none
+			p
+				&:before
+					display: none
+		h2
+				font-size: 32px
+		section
+			padding:
+				top: 30px
+				bottom: 30px
+		.video-text
+			a 
+				padding: 15px 60px !important
+				&:before
+					top: 10px !important
+					left: 30px !important
+		footer
+			text-align: right

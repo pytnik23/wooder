@@ -3,7 +3,7 @@ $main-color: #bea67c
 body
 	font-family: 'Oxygen', sans-serif
 	font-size: 16px
-	min-width: 480px
+	min-width: 320px
 
 	a
 		text-decoration: none
@@ -203,14 +203,16 @@ body
 				display: inline-block
 				height: 100%
 				width: 54%
-				background: url(../images/bg-l.jpg) no-repeat
+				background-image: url(../images/bg-l.jpg)
+				background-repeat: no-repeat
 				background-size: cover
 			.bg-r
 				display: inline-block
 				height: calc(100% + 30px)
 				width: 46%
 				margin-bottom: -30px
-				background: url(../images/bg-r.jpg) no-repeat
+				background-image: url(../images/bg-r.jpg)
+				background-repeat: no-repeat
 				background-size: cover
 			.overlay
 				position: relative
@@ -401,7 +403,9 @@ body
 
 	#video
 		position: relative
-		background: url(../images/video-section-bg.jpg) no-repeat center
+		background-image: url(../images/video-section-bg.jpg)
+		background-position: center
+		background-repeat: no-repeat
 		background-size: cover
 		&:before
 			position: absolute

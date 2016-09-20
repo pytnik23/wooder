@@ -51,6 +51,12 @@
     position: relative;
     left: 0;
   }
+  body main .bg .bg-l {
+    background-image: url(../images/bg-l_sm.jpg);
+  }
+  body main .bg .bg-r {
+    background-image: url(../images/bg-r_sm.jpg);
+  }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -126,5 +132,50 @@
   }
   body header nav {
     float: right;
+  }
+  body .logo {
+    font-size: 24px;
+    top: 3px;
+  }
+  body .logo:before {
+    left: 35px;
+    top: 14px;
+    width: 47px;
+    height: 4px;
+  }
+  body main .main-content h1 {
+    font-size: 50px;
+  }
+  body main .main-content a {
+    padding: 15px 40px;
+  }
+  body #furniture {
+    padding-top: 50px;
+  }
+  body .furniture-text, body .decor-text, body .about-text {
+    padding: 10px 10px !important;
+  }
+  body .furniture-text h2:before, body .decor-text h2:before, body .about-text h2:before {
+    display: none;
+  }
+  body .furniture-text p:before, body .decor-text p:before, body .about-text p:before {
+    display: none;
+  }
+  body h2 {
+    font-size: 32px;
+  }
+  body section {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  body .video-text a {
+    padding: 15px 60px !important;
+  }
+  body .video-text a:before {
+    top: 10px !important;
+    left: 30px !important;
+  }
+  body footer {
+    text-align: right;
   }
 }
